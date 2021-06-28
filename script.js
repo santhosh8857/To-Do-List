@@ -65,9 +65,11 @@ function clearTasks() {
    // taskList.innerHTML = '';
 
    // FASTER WAY
-   while (taskList.firstChild){
-      // taskList.firstChild.remove();
-      taskList.removeChild(taskList.firstChild);
+  if(confirm('Are You Sure? Do you want to remove all tasks?')) {
+      while (taskList.firstChild){
+         // taskList.firstChild.remove();
+         taskList.removeChild(taskList.firstChild);
+      }
    }
 }
 
